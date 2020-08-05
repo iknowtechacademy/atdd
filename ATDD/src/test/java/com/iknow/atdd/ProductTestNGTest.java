@@ -20,7 +20,9 @@ public class ProductTestNGTest {
     @BeforeTest
     public void setBaseURL() throws Exception {
 
-        System.setProperty("webdriver.chrome.driver", "/Users/gustavo/Downloads/chromedriver3");
+        String path = "/Users/Shared/Jenkins/Home/workspace/Atdd/chromedriver3";
+        
+        System.setProperty("webdriver.chrome.driver", path);
         driver = new ChromeDriver();
 
     }
@@ -29,8 +31,9 @@ public class ProductTestNGTest {
     public void verifyHomePage() {
 
         String baseUrl = "http://localhost:9090/JsfDemoApp/faces/welcomeJSF.jsp";
+        
         driver.get(baseUrl);
-        WebElement link = driver.findElement(By.xpath("//*[@id=\"j_id_jsp_416426823_1\"]/a[3]"));
+        WebElement link = driver.findElement(By.xpath("//*[@id=\"j_id_jsp_416426823_1\"]/a"));
         link.click();
 
         try {
