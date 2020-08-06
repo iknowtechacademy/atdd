@@ -20,7 +20,7 @@ public class ProductTestNGTest {
     @BeforeTest
     public void setBaseURL() throws Exception {
 
-        String path = "/Users/Shared/Jenkins/Home/workspace/Curso_atdd/chromedriver3";
+        String path = "/Users/Shared/Jenkins/Home/workspace/Atdd/chromedriver3";
         
         System.setProperty("webdriver.chrome.driver", path);
         driver = new ChromeDriver();
